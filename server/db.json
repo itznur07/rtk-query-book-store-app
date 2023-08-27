@@ -44,6 +44,42 @@
       "rating": 5,
       "featured": true,
       "id": 10
+    },
+    {
+      "name": "connect the dots",
+      "author": "HM Nayeem",
+      "thumbnail": "https://cdn.penguin.co.uk/dam-assets/books/9780241402122/9780241402122-jacket-large.jpg",
+      "price": "14",
+      "rating": "5",
+      "featured": "on",
+      "id": 11
+    },
+    {
+      "name": "Test Book",
+      "author": "Test Author",
+      "thumbnail": "https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg",
+      "price": "23",
+      "rating": "3",
+      "featured": "on",
+      "id": 12
+    },
+    {
+      "name": "How Innovation Work",
+      "author": "Unknow Author",
+      "thumbnail": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1824&q=80",
+      "price": "24",
+      "rating": "4",
+      "featured": "on",
+      "id": 13
+    },
+    {
+      "name": "The Pschychology Of Money",
+      "author": "Morgan Housel",
+      "thumbnail": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1824&q=80",
+      "price": "45",
+      "rating": "4",
+      "featured": false,
+      "id": 14
     }
   ]
 }
