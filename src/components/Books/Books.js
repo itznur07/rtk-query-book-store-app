@@ -31,17 +31,12 @@ const Books = () => {
 
           <div className='flex items-center space-x-4'>
             <button
-              onClick={() => handleStatus("all")}
               type='button'
               className={`lws-filter-btn all active-filter`}
             >
               All
             </button>
-            <button
-              onClick={() => handleStatus("featured")}
-              type='button'
-              className={`lws-filter-btn`}
-            >
+            <button type='button' className={`lws-filter-btn`}>
               Featured
             </button>
           </div>
