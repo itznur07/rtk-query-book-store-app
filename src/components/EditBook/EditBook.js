@@ -18,11 +18,7 @@ const EditBook = () => {
     content = <Form book={book} />;
   }
 
-  return (
-    <>
-        {content}
-    </>
-  );
+  return <>{content}</>;
 };
 
 export default EditBook;

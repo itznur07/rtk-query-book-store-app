@@ -28,15 +28,6 @@
       "id": 4
     },
     {
-      "name": "Learn with sumit Bangladesh ",
-      "author": "Sumit saha ",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": 850,
-      "rating": 5,
-      "featured": true,
-      "id": 10
-    },
-    {
       "name": "How Innovation Work",
       "author": "Unknow Author",
       "thumbnail": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1824&q=80",
@@ -53,6 +44,15 @@
       "rating": "4",
       "featured": false,
       "id": 14
+    },
+    {
+      "name": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSlrQfRuyGKdvR9r_1QROkXsmnX0sV_-XeEgKk0w80lEGql4GGg",
+      "price": "380",
+      "rating": "5",
+      "featured": "on",
+      "id": 15
     }
   ]
 }

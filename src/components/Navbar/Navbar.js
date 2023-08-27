@@ -1,7 +1,15 @@
+import { searchBooks } from "features/filters/filterSlice";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.svg";
 
 const Navbar = () => {
+  const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
+
+  dispatch(searchBooks(search));
+
   return (
     <nav className='py-4 2xl:px-6'>
       <div className='container flex items-center justify-between'>
@@ -40,6 +48,8 @@ const Navbar = () => {
               type='text'
               placeholder='Filter books...'
               className='search'
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
               id='lws-search'
             />
           </div>

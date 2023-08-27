@@ -1,12 +1,24 @@
 import Book from "components/Books/Book";
 import LoadingSpinner from "components/shared/LoadingSpinner";
 import { useGetBooksQuery } from "features/api/apiSlice";
+import { statusChange } from "features/filters/filterSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Books = () => {
   const { data: books, isLoading, isError } = useGetBooksQuery();
+  const dispatch = useDispatch();
+  const { search, type } = useSelector((state) => state.filters);
+
+  const searchByFeatured = (book) => {
+    if (type === "featured") {
+      return !!book.featured;
+    }
+    return true;
+  };
+
+  const searchBook = (book) => book?.name?.toLowerCase()?.includes(search);
 
   let content = null;
-
   if (isLoading) {
     content = <LoadingSpinner />;
   }
@@ -16,9 +28,13 @@ const Books = () => {
   if (!isLoading && !isError && books.length > 0) {
     content = (
       <>
-        {books?.map((book) => (
-          <Book key={book.id} book={book} />
-        ))}
+        {books
+          ?.slice()
+          ?.filter(searchByFeatured)
+          ?.filter(searchBook)
+          ?.map((book) => (
+            <Book key={book.id} book={book} />
+          ))}
       </>
     );
   }
@@ -32,11 +48,20 @@ const Books = () => {
           <div className='flex items-center space-x-4'>
             <button
               type='button'
-              className={`lws-filter-btn all active-filter`}
+              onClick={() => dispatch(statusChange("all"))}
+              className={`lws-filter-btn ${
+                type === "all" ? "active-filter" : ""
+              }`}
             >
               All
             </button>
-            <button type='button' className={`lws-filter-btn`}>
+            <button
+              onClick={() => dispatch(statusChange("featured"))}
+              type='button'
+              className={`lws-filter-btn ${
+                type === "featured" ? "active-filter" : ""
+              }`}
+            >
               Featured
             </button>
           </div>
