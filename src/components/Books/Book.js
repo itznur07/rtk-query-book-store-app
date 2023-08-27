@@ -1,7 +1,17 @@
+import { useRemoveBookMutation } from "features/api/apiSlice";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Book = ({ book }) => {
   const { name, author, thumbnail, featured, rating, price, id } = book;
+  const [removeBook, { isSuccess }] = useRemoveBookMutation();
+
+  const handleRemoveBook = () => {
+    removeBook(id);
+    if (isSuccess) {
+      toast("sucess", "book deleted successfully!");
+    }
+  };
 
   return (
     <div className='book-card'>
@@ -31,7 +41,11 @@ const Book = ({ book }) => {
                 </svg>
               </button>
             </Link>
-            <button type='button' className='lws-deleteBook'>
+            <button
+              onClick={handleRemoveBook}
+              type='button'
+              className='lws-deleteBook'
+            >
               <svg
                 fill='none'
                 viewBox='0 0 24 24'

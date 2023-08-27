@@ -28,15 +28,6 @@
       "id": 4
     },
     {
-      "name": "Js",
-      "author": "Akash Ahmed",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": 500,
-      "rating": 3,
-      "featured": true,
-      "id": 8
-    },
-    {
       "name": "Learn with sumit Bangladesh ",
       "author": "Sumit saha ",
       "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
@@ -44,24 +35,6 @@
       "rating": 5,
       "featured": true,
       "id": 10
-    },
-    {
-      "name": "Dev connect the dots",
-      "author": "Stack Learner",
-      "thumbnail": "https://cdn.penguin.co.uk/dam-assets/books/9780241402122/9780241402122-jacket-large.jpg",
-      "price": "6",
-      "rating": "5",
-      "featured": "on",
-      "id": 11
-    },
-    {
-      "name": "Test Book",
-      "author": "Test Author",
-      "thumbnail": "https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg",
-      "price": "23",
-      "rating": "3",
-      "featured": "on",
-      "id": 12
     },
     {
       "name": "How Innovation Work",
