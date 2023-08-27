@@ -1,10 +1,16 @@
-const Book = () => {
+const Book = ({ book }) => {
+  const { name, author, thumbnail, featured, rating, price } = book;
+
   return (
     <div className='book-card'>
-      <img className='h-[240px] w-[170px] object-cover' src='' alt='book' />
+      <img
+        className='h-[240px] w-[170px] object-cover'
+        src={thumbnail}
+        alt='book'
+      />
       <div className='flex-1 h-full pr-2 pt-2 flex flex-col'>
         <div className='flex items-center justify-between'>
-          <span className='lws-badge'>featured</span>
+          <span className='lws-badge'>{featured ? "featured" : "NAN"}</span>
           <div className='text-gray-500 space-x-2'>
             <button type='button' className='lws-edit'>
               <svg
@@ -40,11 +46,10 @@ const Book = () => {
         </div>
 
         <div className='space-y-2 mt-4 h-full'>
-          <h4 className='lws-book-name'>Name</h4>
-          <p className='lws-author'>Author Name</p>
+          <h4 className='lws-book-name'>{name}</h4>
+          <p className='lws-author'>{author}</p>
           <div className='lws-stars'>
-            5*
-            {/* {[...Array(rating)]?.map((rating, i) => (
+            {[...Array(rating)]?.map((rating, i) => (
               <svg
                 key={i + 1}
                 viewBox='0 0 20 20'
@@ -57,9 +62,9 @@ const Book = () => {
                   clipRule='evenodd'
                 />
               </svg>
-            ))} */}
+            ))}
           </div>
-          <p className='lws-price'>BDT 64</p>
+          <p className='lws-price'>${price}</p>
         </div>
       </div>
     </div>
